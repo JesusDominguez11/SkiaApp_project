@@ -1,0 +1,22 @@
+﻿@page "/"
+
+<PageTitle>Dashboard</PageTitle>
+
+<h1>Dashboard</h1>
+
+<button @onclick="IncrementarRPM">
+    Acelerar
+</button>
+
+<p>RPM: @rpm</p>
+
+@code {
+
+    private int rpm = 0;
+
+    private void IncrementarRPM()
+    {
+        rpm += 500;
+    }
+
+}

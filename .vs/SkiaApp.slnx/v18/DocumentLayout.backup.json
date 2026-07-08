@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml",
+              "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml",
+              "RelativeToolTip": "SkiaApp\\DashboardPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-20T00:26:03.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml.cs",
+              "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml.cs",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml.cs",
+              "RelativeToolTip": "SkiaApp\\DashboardPage.xaml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwDgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T00:09:55.706Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
