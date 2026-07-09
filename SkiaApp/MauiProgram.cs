@@ -23,6 +23,7 @@ namespace SkiaApp
             builder.Services.AddSingleton<StateService>();
             builder.Services.AddSingleton<IVersionService, VersionService>();
             builder.Services.AddSingleton<IUpdateService, UpdateService>();
+            builder.Services.AddSingleton<IDownloadService, DownloadService>();
             builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddMauiBlazorWebView();
 

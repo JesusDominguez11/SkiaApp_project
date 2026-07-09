@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkiaApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96333710d812ad84e0fdf8990a035270066287ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55ec2d25997881a831e1cf11ab5811d4856aa025")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkiaApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkiaApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

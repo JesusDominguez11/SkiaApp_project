@@ -15,5 +15,7 @@ namespace SkiaApp.Models
         public string Changelog { get; set; } = "";
 
         public bool Mandatory { get; set; }
+
+        public long Size { get; set; }
     }
 }

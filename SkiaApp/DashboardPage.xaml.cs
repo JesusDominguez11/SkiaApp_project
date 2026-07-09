@@ -1,4 +1,5 @@
 using CommunityToolkit.Maui.Extensions;
+using SkiaApp.Models;
 using SkiaApp.Popups;
 using SkiaApp.Services;
 using SkiaSharp;
@@ -10,12 +11,13 @@ public partial class DashboardPage : ContentPage
 {
     private double _animationProgress = 0.0;
 
-    public DashboardPage(IVersionService versionService, IUpdateService updateService)
+    public DashboardPage(IVersionService versionService, IUpdateService updateService, IDownloadService downloadService)
 	{
 		InitializeComponent();
 
         _versionService = versionService;
         _updateService = updateService;
+        _downloadService = downloadService;
         Title = $"Dashboard v{_versionService.CurrentVersion}";
 
         lblVersion.Text = $"Versión {_versionService.CurrentVersion} (Build {_versionService.Build})";
@@ -27,12 +29,27 @@ public partial class DashboardPage : ContentPage
 
         var update = await _updateService.CheckForUpdatesAsync();
 
-        //if (update != null)
-        //    lblNewVersion.Text = $"Nueva version {update.Version}";
-        //else
-        //    lblNewVersion.Text = $"Sin actualizaciones";
         if (update != null)
         {
+            var progress = new Progress<DownloadProgress>(p =>
+            {
+                lblNewVersion.Text =
+                    $"{p.Percentage:P0}";
+            });
+
+            // Ojo: usa una URL de un archivo de prueba por ahora
+            var path = await _downloadService.DownloadApkAsync(
+                "https://raw.githubusercontent.com/JesusDominguez11/SkiaApp/refs/heads/main/12345.pdf",
+                progress);
+
+            if (path != null)
+            {
+                await DisplayAlert(
+                    "Descarga",
+                    $"Guardado en:\n{path}",
+                    "OK");
+            }
+
             this.ShowPopup(
                 new UpdatePopup(update));
         }
@@ -153,5 +170,6 @@ public partial class DashboardPage : ContentPage
 
     private readonly IVersionService _versionService;
     private readonly IUpdateService _updateService;
+    private readonly IDownloadService _downloadService;
 
 }
