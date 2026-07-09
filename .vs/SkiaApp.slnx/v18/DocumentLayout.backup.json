@@ -18,11 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b2375e54-d885-3426-9cf9-ca48e71a58bc}"
             },
             {
               "$type": "Document",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml",
               "RelativeToolTip": "SkiaApp\\DashboardPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-06-20T00:26:03.908Z",
               "EditorCaption": ""
@@ -45,7 +49,7 @@
               "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml.cs",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml.cs",
               "RelativeToolTip": "SkiaApp\\DashboardPage.xaml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAqwDgAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-20T00:09:55.706Z",
               "EditorCaption": ""

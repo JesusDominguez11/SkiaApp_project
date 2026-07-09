@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\SkiaApp.styles.css",
+      "PackagePath": "staticwebassets\\SkiaApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.SkiaApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.SkiaApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.SkiaApp.props",
+      "PackagePath": "build\\SkiaApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.SkiaApp.props",
+      "PackagePath": "buildMultiTargeting\\SkiaApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.SkiaApp.props",
+      "PackagePath": "buildTransitive\\SkiaApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

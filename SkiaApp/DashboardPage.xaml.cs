@@ -5,27 +5,82 @@ namespace SkiaApp;
 
 public partial class DashboardPage : ContentPage
 {
-    private float _progress = 0;
-    private const float AnimationSpeed = 0.01f;
+    private double _animationProgress = 0.0;
 
     public DashboardPage()
 	{
 		InitializeComponent();
-
-        Dispatcher.StartTimer(TimeSpan.FromMilliseconds(16), () =>
-        {
-            _progress += AnimationSpeed;
-
-            if (_progress > 1)
-                _progress = 1;
-
-            canvasView.InvalidateSurface();
-
-            return _progress < 1;
-        });
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        IniciarAnimacionFlor();
     }
 
+    private void IniciarAnimacionFlor()
+    {
+        // Creamos una animación de 0 a 1 que dura 1.5 segundos (1500 ms)
+        var flowerAnimation = new Animation(v =>
+        {
+            _animationProgress = v;
 
+            // Forzamos a SkiaSharp a volver a ejecutar OnPaintSurface
+            canvasView.InvalidateSurface();
+        },
+        start: 0.0,
+        end: 1.0,
+        easing: Easing.CubicOut); // Efecto suave al terminar
+
+        // Ejecutamos la animación en la página actual
+        flowerAnimation.Commit(this, "AnimacionFlor", length: 10000, repeat: () => false);
+    }
+
+    private float _progress = 0;
+    private const float AnimationSpeed = 0.01f;
+    private void OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
+    {
+        var canvas = e.Surface.Canvas;
+        int width = e.Info.Width;
+        int height = e.Info.Height;
+
+        float centerXP = width / 2f;
+        float centerYP = height / 2f;
+
+        // El tamaño máximo final de la flor dependiente del tamaño de la pantalla
+        float maxRadius = Math.Min(width, height) / 8f;
+
+        canvas.Clear(SKColors.White);
+
+        // Multiplicamos el radio por el progreso actual de la animación
+        float currentRadius = maxRadius * (float)_animationProgress;
+
+        // Si la animación no ha empezado, no dibujamos nada
+        if (currentRadius <= 0) return;
+
+        // 1. Dibujar Pétalos Animados
+        using (var petalPaint = new SKPaint { IsAntialias = true, Color = SKColors.HotPink, Style = SKPaintStyle.Fill })
+        {
+            int numPetals = 8;
+
+            // La distancia del pétalo al centro también escala con la animación
+            float petalDistance = currentRadius * 1.5f;
+
+            for (int i = 0; i < numPetals; i++)
+            {
+                double angle = (i * 2 * Math.PI) / numPetals;
+                float petalCenterX = centerXP + (float)(Math.Cos(angle) * petalDistance);
+                float petalCenterY = centerYP + (float)(Math.Sin(angle) * petalDistance);
+
+                canvas.DrawCircle(petalCenterX, petalCenterY, currentRadius, petalPaint);
+            }
+        }
+
+        // 2. Dibujar Centro Animado
+        using (var centerPaint = new SKPaint { IsAntialias = true, Color = SKColors.Gold, Style = SKPaintStyle.Fill })
+        {
+            canvas.DrawCircle(centerXP, centerYP, currentRadius, centerPaint);
+        }
+    }
 
     private void Canvas_PaintSurface(
     object? sender,

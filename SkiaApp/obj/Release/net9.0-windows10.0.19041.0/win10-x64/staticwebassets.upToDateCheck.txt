@@ -1,0 +1,8 @@
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\wwwroot\css\app.css
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\wwwroot\css\bootstrap\bootstrap.min.css
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\wwwroot\index.html

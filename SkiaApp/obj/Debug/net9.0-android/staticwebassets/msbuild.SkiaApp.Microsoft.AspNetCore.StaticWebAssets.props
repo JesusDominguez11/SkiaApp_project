@@ -97,7 +97,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>5481</FileLength>
-      <LastWriteTime>Wed, 08 Jul 2026 00:01:51 GMT</LastWriteTime>
+      <LastWriteTime>Thu, 09 Jul 2026 15:15:32 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SkiaApp.styles.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>

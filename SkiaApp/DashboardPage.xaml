@@ -9,7 +9,7 @@
             x:Name="canvasView"
             HeightRequest="500"
             WidthRequest="500"
-            PaintSurface="Canvas_PaintSurface"/>
+            PaintSurface="OnPaintSurface"/>
 
     </Grid>
 </ContentPage>
