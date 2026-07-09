@@ -3,20 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\resources\\raw\\version.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\resources\\raw\\version.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\popups\\updatepopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\popups\\updatepopup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JD66188\\AppData\\Local\\SourceServer\\5ffcf3986a6f62000e0fa275a08494b53cffac8513719618ac6a75e0486cbf62\\src\\Mono.Android\\Android.Runtime\\JNINativeWrapper.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\dashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JD66188\\AppData\\Local\\Temp\\.vsdbgsrc\\40e58c98dded20e81a9b845996c3349a6b3268953dba7d2d854e87a07516f436\\TaskAwaiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\services\\updateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\services\\updateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\popups\\updatepopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\popups\\updatepopup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\dashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +36,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +44,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "version.json",
-              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Resources\\Raw\\version.json",
-              "RelativeDocumentMoniker": "SkiaApp\\Resources\\Raw\\version.json",
-              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Resources\\Raw\\version.json*",
-              "RelativeToolTip": "SkiaApp\\Resources\\Raw\\version.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-09T18:29:18.083Z",
+              "DocumentIndex": 1,
+              "Title": "JNINativeWrapper.g.cs",
+              "DocumentMoniker": "C:\\Users\\JD66188\\AppData\\Local\\SourceServer\\5ffcf3986a6f62000e0fa275a08494b53cffac8513719618ac6a75e0486cbf62\\src\\Mono.Android\\Android.Runtime\\JNINativeWrapper.g.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\5ffcf3986a6f62000e0fa275a08494b53cffac8513719618ac6a75e0486cbf62\\src\\Mono.Android\\Android.Runtime\\JNINativeWrapper.g.cs",
+              "ToolTip": "C:\\Users\\JD66188\\AppData\\Local\\SourceServer\\5ffcf3986a6f62000e0fa275a08494b53cffac8513719618ac6a75e0486cbf62\\src\\Mono.Android\\Android.Runtime\\JNINativeWrapper.g.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\5ffcf3986a6f62000e0fa275a08494b53cffac8513719618ac6a75e0486cbf62\\src\\Mono.Android\\Android.Runtime\\JNINativeWrapper.g.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T19:02:03.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "TaskAwaiter.cs",
+              "DocumentMoniker": "C:\\Users\\JD66188\\AppData\\Local\\Temp\\.vsdbgsrc\\40e58c98dded20e81a9b845996c3349a6b3268953dba7d2d854e87a07516f436\\TaskAwaiter.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\40e58c98dded20e81a9b845996c3349a6b3268953dba7d2d854e87a07516f436\\TaskAwaiter.cs",
+              "ToolTip": "C:\\Users\\JD66188\\AppData\\Local\\Temp\\.vsdbgsrc\\40e58c98dded20e81a9b845996c3349a6b3268953dba7d2d854e87a07516f436\\TaskAwaiter.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\40e58c98dded20e81a9b845996c3349a6b3268953dba7d2d854e87a07516f436\\TaskAwaiter.cs [Read Only]",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAawLAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T19:01:42.002Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UpdateService.cs",
               "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Services\\UpdateService.cs",
               "RelativeDocumentMoniker": "SkiaApp\\Services\\UpdateService.cs",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Services\\UpdateService.cs",
               "RelativeToolTip": "SkiaApp\\Services\\UpdateService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwBoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAlwC4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T17:45:26.595Z",
+              "WhenOpened": "2026-07-09T19:01:29.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UpdatePopup.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Popups\\UpdatePopup.xaml.cs",
+              "RelativeDocumentMoniker": "SkiaApp\\Popups\\UpdatePopup.xaml.cs",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Popups\\UpdatePopup.xaml.cs",
+              "RelativeToolTip": "SkiaApp\\Popups\\UpdatePopup.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T18:53:50.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdatePopup.xaml",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Popups\\UpdatePopup.xaml",
+              "RelativeDocumentMoniker": "SkiaApp\\Popups\\UpdatePopup.xaml",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Popups\\UpdatePopup.xaml",
+              "RelativeToolTip": "SkiaApp\\Popups\\UpdatePopup.xaml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwDAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-09T18:53:37.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DashboardPage.xaml",
               "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml",
               "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml",
               "RelativeToolTip": "SkiaApp\\DashboardPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-06-20T00:26:03.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DashboardPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml.cs",
               "RelativeDocumentMoniker": "SkiaApp\\DashboardPage.xaml.cs",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\DashboardPage.xaml.cs",
               "RelativeToolTip": "SkiaApp\\DashboardPage.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wB0AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-20T00:09:55.706Z",
               "EditorCaption": ""

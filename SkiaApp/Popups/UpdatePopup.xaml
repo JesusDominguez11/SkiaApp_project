@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="SkiaApp.Popups.UpdatePopup">
+
+    <Border
+        WidthRequest="320"
+        Padding="20"
+        StrokeShape="RoundRectangle 20"
+        BackgroundColor="White">
+
+        <VerticalStackLayout Spacing="15">
+
+            <Label
+                Text="Nueva actualización"
+                FontSize="22"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+            <Label
+                x:Name="lblVersion"
+                FontSize="16"
+                HorizontalOptions="Center"/>
+
+            <Label
+                x:Name="lblChanges"
+                FontSize="14"/>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Button
+                    Text="Más tarde"
+                    Clicked="Close_Clicked"/>
+
+                <Button
+                    Text="Actualizar"
+                    Clicked="Update_Clicked"/>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </Border>
+
+</toolkit:Popup>

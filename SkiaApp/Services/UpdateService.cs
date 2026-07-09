@@ -1,6 +1,7 @@
 ﻿using SkiaApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
@@ -15,7 +16,7 @@ namespace SkiaApp.Services
         private readonly HttpClient _httpClient;
 
         //private const string VersionUrl = "https://TU:URL/version.json";
-        private const string VersionUrl = "C://User//JD66188//Downloads//version.json";
+        private const string VersionUrl = "https://raw.githubusercontent.com/JesusDominguez11/SkiaApp/refs/heads/main/version.json";
 
         public UpdateService(IVersionService versionService, HttpClient httpClient)
         {
@@ -26,15 +27,8 @@ namespace SkiaApp.Services
         public async Task<UpdateInfo?> CheckForUpdatesAsync()
         {
             try
-            {
-                using var stream = await FileSystem.OpenAppPackageFileAsync("version.json");
-
-                using var reader = new StreamReader(stream);
-
-                var json = await reader.ReadToEndAsync();
-
-                var updateInfo = JsonSerializer.Deserialize<UpdateInfo>(json);
-                //var updateInfo = await _httpClient.GetFromJsonAsync<UpdateInfo>(VersionUrl);
+            { 
+                var updateInfo = await _httpClient.GetFromJsonAsync<UpdateInfo>(VersionUrl);
 
                 if (updateInfo == null)
                     return null;
@@ -46,6 +40,7 @@ namespace SkiaApp.Services
             }
             catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
                 //si no hay internet o falla github
                 return null;
             }

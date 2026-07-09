@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Extensions;
+using SkiaApp.Popups;
 using SkiaApp.Services;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
@@ -25,10 +27,15 @@ public partial class DashboardPage : ContentPage
 
         var update = await _updateService.CheckForUpdatesAsync();
 
+        //if (update != null)
+        //    lblNewVersion.Text = $"Nueva version {update.Version}";
+        //else
+        //    lblNewVersion.Text = $"Sin actualizaciones";
         if (update != null)
-            lblNewVersion.Text = $"Nueva version {update.Version}";
-        else
-            lblNewVersion.Text = $"Sin actualizaciones";
+        {
+            this.ShowPopup(
+                new UpdatePopup(update));
+        }
 
         //await IniciarAnimacionFlor();
     }

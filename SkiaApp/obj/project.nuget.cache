@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mcCWK2zSsEY=",
+  "dgSpecHash": "x04L+zFiJ5E=",
   "success": true,
   "projectFilePath": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\SkiaApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JD66188\\.nuget\\packages\\communitytoolkit.maui\\12.0.0\\communitytoolkit.maui.12.0.0.nupkg.sha512",
+    "C:\\Users\\JD66188\\.nuget\\packages\\communitytoolkit.maui.core\\12.0.0\\communitytoolkit.maui.core.12.0.0.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.9\\microsoft.aspnetcore.authorization.9.0.9.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.9\\microsoft.aspnetcore.components.9.0.9.nupkg.sha512",
@@ -56,6 +58,7 @@
     "C:\\Users\\JD66188\\.nuget\\packages\\skiasharp.views.maui.controls\\3.119.4\\skiasharp.views.maui.controls.3.119.4.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\skiasharp.views.maui.core\\3.119.4\\skiasharp.views.maui.core.3.119.4.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\skiasharp.views.winui\\3.119.4\\skiasharp.views.winui.3.119.4.nupkg.sha512",
+    "C:\\Users\\JD66188\\.nuget\\packages\\system.speech\\9.0.5\\system.speech.9.0.5.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\xamarin.android.glide\\4.16.0.12\\xamarin.android.glide.4.16.0.12.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.12\\xamarin.android.glide.annotations.4.16.0.12.nupkg.sha512",
     "C:\\Users\\JD66188\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.12\\xamarin.android.glide.disklrucache.4.16.0.12.nupkg.sha512",
