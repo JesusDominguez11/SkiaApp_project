@@ -17,7 +17,11 @@ namespace SkiaApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
+            builder.Services.AddTransient<DashboardPage>();
             builder.Services.AddSingleton<StateService>();
+            builder.Services.AddSingleton<IVersionService, VersionService>();
+            builder.Services.AddSingleton<IUpdateService, UpdateService>();
+            builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG

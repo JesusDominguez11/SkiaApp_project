@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Maui.ApplicationModel;
+
+namespace SkiaApp.Services
+{
+    internal class VersionService : IVersionService
+    {
+        public string CurrentVersion => AppInfo.Current.VersionString;
+
+        public int Build => int.Parse(AppInfo.Current.BuildString);
+
+        public bool IsNewerVersion(string remoteVersion)
+        {
+            if (!System.Version.TryParse(remoteVersion, out var remote))
+                return false;
+
+            if (!System.Version.TryParse(CurrentVersion, out var current))
+                return false;
+
+            return remote > current;
+        }
+    }
+}

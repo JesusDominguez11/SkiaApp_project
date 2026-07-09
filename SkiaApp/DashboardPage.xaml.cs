@@ -1,3 +1,4 @@
+using SkiaApp.Services;
 using SkiaSharp;
 using SkiaSharp.Views.Maui;
 
@@ -7,17 +8,32 @@ public partial class DashboardPage : ContentPage
 {
     private double _animationProgress = 0.0;
 
-    public DashboardPage()
+    public DashboardPage(IVersionService versionService, IUpdateService updateService)
 	{
 		InitializeComponent();
-    }
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        IniciarAnimacionFlor();
+
+        _versionService = versionService;
+        _updateService = updateService;
+        Title = $"Dashboard v{_versionService.CurrentVersion}";
+
+        lblVersion.Text = $"Versión {_versionService.CurrentVersion} (Build {_versionService.Build})";
     }
 
-    private void IniciarAnimacionFlor()
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        var update = await _updateService.CheckForUpdatesAsync();
+
+        if (update != null)
+            lblNewVersion.Text = $"Nueva version {update.Version}";
+        else
+            lblNewVersion.Text = $"Sin actualizaciones";
+
+        //await IniciarAnimacionFlor();
+    }
+
+    private async Task IniciarAnimacionFlor()
     {
         // Creamos una animación de 0 a 1 que dura 1.5 segundos (1500 ms)
         var flowerAnimation = new Animation(v =>
@@ -127,4 +143,8 @@ public partial class DashboardPage : ContentPage
 
         canvas.DrawPath(partialPath, paint);
     }
+
+    private readonly IVersionService _versionService;
+    private readonly IUpdateService _updateService;
+
 }

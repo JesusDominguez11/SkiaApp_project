@@ -5,6 +5,20 @@
              x:Class="SkiaApp.DashboardPage"
              Title="DashboardPage">
     <Grid>
+        
+        <Label
+        x:Name="lblVersion"
+        Margin="10"
+        VerticalOptions="Start"
+        HorizontalOptions="Start"
+        FontSize="14" TranslationY="10"/>
+        <Label
+        x:Name="lblNewVersion"
+        Margin="10"
+        VerticalOptions="Start"
+        HorizontalOptions="Start"
+        FontSize="14" TranslationY="30"/>
+
         <skia:SKCanvasView
             x:Name="canvasView"
             HeightRequest="500"
