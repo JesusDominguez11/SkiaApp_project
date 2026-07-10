@@ -2,6 +2,8 @@ C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulato
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\SkiaApp.runtimeconfig.json
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\SkiaApp.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\SkiaApp.pdb
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\Microsoft.AspNetCore.Authorization.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\Microsoft.AspNetCore.Components.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-ios\iossimulator-x64\Microsoft.AspNetCore.Components.Forms.dll

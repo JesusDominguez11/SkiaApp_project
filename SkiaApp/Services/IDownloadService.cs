@@ -9,7 +9,7 @@ namespace SkiaApp.Services
 {
     public interface IDownloadService
     {
-        Task<string?> DownloadApkAsync(
+        Task<string?> DownloadFileAsync(
             string url,
             IProgress<DownloadProgress>? progress = null);
     }

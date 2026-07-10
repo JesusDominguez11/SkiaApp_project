@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+#if ANDROID
+using SkiaApp.Platforms.Android;
+#endif
 using SkiaApp.Services;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 
@@ -24,6 +27,9 @@ namespace SkiaApp
             builder.Services.AddSingleton<IVersionService, VersionService>();
             builder.Services.AddSingleton<IUpdateService, UpdateService>();
             builder.Services.AddSingleton<IDownloadService, DownloadService>();
+#if ANDROID
+            IServiceCollection serviceCollection = builder.Services.AddSingleton<IInstallerService, AndroidInstallerService>();
+#endif
             builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddMauiBlazorWebView();
 

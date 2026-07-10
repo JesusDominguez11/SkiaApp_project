@@ -13,6 +13,10 @@
 
         <VerticalStackLayout Spacing="15">
 
+            <ProgressBar Progress="{Binding Progress}" />
+
+            <Label Text="{Binding Status}" />
+
             <Label
                 Text="Nueva actualización"
                 FontSize="22"

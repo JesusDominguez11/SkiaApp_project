@@ -1,17 +1,25 @@
 using CommunityToolkit.Maui.Views;
 using SkiaApp.Models;
+using SkiaApp.Services;
 
 namespace SkiaApp.Popups;
 
 public partial class UpdatePopup : Popup
 {
     private readonly UpdateInfo _updateInfo;
+    private readonly IDownloadService _downloadService;
+    private readonly IInstallerService _installerService;
 
-    public UpdatePopup(UpdateInfo updateInfo)
+    private bool _isDownloading;
+    private double _progress;
+    private string _status = "";
+    public UpdatePopup(UpdateInfo updateInfo, IDownloadService downloadService, IInstallerService installerService)
 	{
 		InitializeComponent();
 
         _updateInfo = updateInfo;
+        _downloadService = downloadService;
+        _installerService = installerService;
 
         lblVersion.Text =
             $"Versión {_updateInfo.Version}";
@@ -26,10 +34,31 @@ public partial class UpdatePopup : Popup
     }
 
 
-    private void Update_Clicked(object sender, EventArgs e)
+    private async void Update_Clicked(object sender, EventArgs e)
     {
-        // después aquí llamaremos DownloadService
-        Close();
+        _isDownloading = true;
+        _status = "Descargando actualización...";
+        OnPropertyChanged();
+
+        var progress = new Progress<DownloadProgress>(p =>
+        {
+            lblChanges.Text =
+                $"Descargando {p.Percentage:P0}";
+        });
+
+
+        var path = await _downloadService.DownloadFileAsync(
+            _updateInfo.ApkUrl,
+            progress);
+
+
+        if (path != null)
+        {
+            _status = "Instalando...";
+            OnPropertyChanged();
+
+            await _installerService.InstallAsync(path);
+        }
     }
     private void Close()
     {

@@ -64,7 +64,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Remove="Resources\Raw\version.json" />
+      <None Remove="Platforms\Android\Resources\xml\file_paths.xml" />
     </ItemGroup>
 
     <ItemGroup>

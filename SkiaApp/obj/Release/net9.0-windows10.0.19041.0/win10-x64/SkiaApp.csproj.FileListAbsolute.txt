@@ -1,5 +1,6 @@
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\AboutAssets.txt
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\version.json
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\app.css.gz
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\wwwroot\css\bootstrap\bootstrap.min.css.gz
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\wwwroot\index.html.gz
@@ -349,6 +350,8 @@ C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.190
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\SkiaApp.pdb
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Web.WebView2.Core.dll
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Authorization.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\Microsoft.AspNetCore.Components.Forms.dll
@@ -411,6 +414,7 @@ C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.190
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Controls.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
+C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\JD66188\source\repos\SkiaApp\SkiaApp\bin\Release\net9.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll

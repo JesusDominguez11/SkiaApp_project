@@ -1,5 +1,7 @@
 obj\Release\net9.0-android\android-x64\aot\_Microsoft.Android.Resource.Designer.dll.so
 obj\Release\net9.0-android\android-x64\aot\SkiaApp.dll.so
+obj\Release\net9.0-android\android-x64\aot\CommunityToolkit.Maui.dll.so
+obj\Release\net9.0-android\android-x64\aot\CommunityToolkit.Maui.Core.dll.so
 obj\Release\net9.0-android\android-x64\aot\Microsoft.AspNetCore.Components.dll.so
 obj\Release\net9.0-android\android-x64\aot\Microsoft.AspNetCore.Components.Web.dll.so
 obj\Release\net9.0-android\android-x64\aot\Microsoft.AspNetCore.Components.WebView.dll.so
@@ -66,6 +68,7 @@ obj\Release\net9.0-android\android-x64\aot\System.ComponentModel.TypeConverter.d
 obj\Release\net9.0-android\android-x64\aot\System.ComponentModel.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Console.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Diagnostics.DiagnosticSource.dll.so
+obj\Release\net9.0-android\android-x64\aot\System.Diagnostics.TraceSource.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Formats.Asn1.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.IO.Compression.Brotli.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.IO.Compression.dll.so
@@ -74,6 +77,7 @@ obj\Release\net9.0-android\android-x64\aot\System.IO.Pipelines.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Linq.Expressions.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Linq.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Memory.dll.so
+obj\Release\net9.0-android\android-x64\aot\System.Net.Http.Json.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Net.Http.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Net.Primitives.dll.so
 obj\Release\net9.0-android\android-x64\aot\System.Net.Requests.dll.so

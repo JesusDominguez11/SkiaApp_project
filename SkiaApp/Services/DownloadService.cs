@@ -14,7 +14,7 @@ namespace SkiaApp.Services
         {
             _httpClient = httpClient;
         }
-        public async Task<string?> DownloadApkAsync(
+        public async Task<string?> DownloadFileAsync(
         string url, IProgress<DownloadProgress>? progress = null)
         {
             try
@@ -61,7 +61,7 @@ namespace SkiaApp.Services
 
                 return filePath;
             }
-            catch
+            catch(Exception ex) 
             {
                 return null;
             }
