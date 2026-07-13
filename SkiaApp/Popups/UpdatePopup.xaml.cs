@@ -57,6 +57,10 @@ public partial class UpdatePopup : Popup
             _status = "Instalando...";
             OnPropertyChanged();
 
+            var fileInfo = new FileInfo(path);
+
+            System.Diagnostics.Debug.WriteLine($"Tamaño APK: {fileInfo.Length} bytes");
+
             await _installerService.InstallAsync(path);
         }
     }
