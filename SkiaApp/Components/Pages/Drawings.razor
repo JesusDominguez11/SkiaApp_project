@@ -1,10 +1,17 @@
 ﻿@page "/drawings"
 
+@using SkiaApp.Services
+
+@inject DrawingNavigationService DrawingService
+
 <PageTitle>Drawings</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
 
-    <MudPaper Elevation="4" Class="pa-6 paper-gradient" Style="border-radius:10px;">
+    <MudPaper Elevation="4"
+              Class="pa-6 paper-gradient"
+              Style="border-radius:10px;">
+
         <MudText Typo="Typo.h4">
             Galería de dibujos
         </MudText>
@@ -12,7 +19,9 @@
         <MudText Typo="Typo.subtitle1" Color="Color.Primary">
             Colección de ejemplos realizados con SkiaSharp.
         </MudText>
+
     </MudPaper>
+
 
     <MudGrid Class="mt-6">
 
@@ -28,29 +37,37 @@
                                  Size="Size.Large"
                                  Color="Color.Primary" />
 
+
                         <MudText Typo="Typo.h6">
                             @drawing.Name
                         </MudText>
+
 
                         <MudText Typo="Typo.body2">
                             @drawing.Description
                         </MudText>
 
+
                         <MudChip T="string"
                                  Color="@drawing.Color"
                                  Variant="Variant.Outlined">
+
                             @drawing.Status
+
                         </MudChip>
+
 
                         <MudSpacer />
 
+
                         <MudButton Variant="Variant.Filled"
                                    Color="Color.Primary"
-                                   Href="@drawing.Url">
+                                   OnClick="@(() => OpenDrawing(drawing.Id))">
 
                             Abrir
 
                         </MudButton>
+
 
                     </MudStack>
 
@@ -63,15 +80,23 @@
 
 </MudContainer>
 
+
 @code
 {
+
+    private void OpenDrawing(string id)
+    {
+        DrawingService.ShowDrawing(id);
+    }
+
+
     public class DrawingItem
     {
+        public string Id { get; set; } = "";
+
         public string Name { get; set; } = "";
 
         public string Description { get; set; } = "";
-
-        public string Url { get; set; } = "";
 
         public string Status { get; set; } = "";
 
@@ -80,47 +105,58 @@
         public Color Color { get; set; }
     }
 
+
+
     private readonly List<DrawingItem> drawings =
     [
         new()
         {
-            Name = "test",
-            Description = "descripcion de prueba.",
-            Url = "/drawings/flower",
+            Id = "flower",
+
+            Name = "Flor",
+
+            Description =
+                "Primera animación realizada con SkiaSharp.",
+
             Status = "Completado",
+
             Icon = Icons.Material.Outlined.LocalFlorist,
+
             Color = Color.Success
         },
 
-        // new()
-        // {
-        //     Name = "Planeta",
-        //     Description = "Uso de gradientes y sombras.",
-        //     Url = "/drawings/planet",
-        //     Status = "Próximamente",
-        //     Icon = Icons.Material.Outlined.Public,
-        //     Color = Color.Warning
-        // },
 
-        // new()
-        // {
-        //     Name = "Nave",
-        //     Description = "Transformaciones y rotaciones.",
-        //     Url = "/drawings/ship",
-        //     Status = "Próximamente",
-        //     Icon = Icons.Material.Outlined.RocketLaunch,
-        //     Color = Color.Warning
-        // },
+        new()
+        {
+            Id = "planet",
 
-        // new()
-        // {
-        //     Name = "Paisaje",
-        //     Description = "Curvas, montañas y árboles.",
-        //     Url = "/drawings/landscape",
-        //     Status = "Próximamente",
-        //     Icon = Icons.Material.Outlined.Landscape,
-        //     Color = Color.Warning
-        // }
+            Name = "Planeta",
+
+            Description =
+                "Gradientes, iluminación y sombras.",
+
+            Status = "Próximamente",
+
+            Icon = Icons.Material.Outlined.Public,
+
+            Color = Color.Warning
+        },
+
+
+        new()
+        {
+            Id = "ship",
+
+            Name = "Nave",
+
+            Description =
+                "Transformaciones y movimiento.",
+
+            Status = "Próximamente",
+
+            Icon = Icons.Material.Outlined.RocketLaunch,
+
+            Color = Color.Warning
+        }
     ];
 }
-```

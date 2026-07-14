@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using MudBlazor.Services;
+using SkiaApp.Graphics;
+
 
 #if ANDROID
 using SkiaApp.Platforms.Android;
@@ -31,6 +33,8 @@ namespace SkiaApp
             builder.Services.AddSingleton<IVersionService, VersionService>();
             builder.Services.AddSingleton<IUpdateService, UpdateService>();
             builder.Services.AddSingleton<IDownloadService, DownloadService>();
+            builder.Services.AddSingleton<DrawingNavigationService>();
+            builder.Services.AddSingleton<IDrawingRenderer, FlowerRenderer>();
 #if ANDROID
             IServiceCollection serviceCollection = builder.Services.AddSingleton<IInstallerService, AndroidInstallerService>();
 #endif
