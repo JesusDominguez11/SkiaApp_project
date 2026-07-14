@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Extensions;
 using SkiaApp.Models;
 using SkiaApp.Popups;
@@ -24,16 +25,29 @@ public partial class DashboardPage : ContentPage
         lblVersion.Text = $"Versión {_versionService.CurrentVersion} (Build {_versionService.Build})";
     }
 
+    private bool _updateDismissed;
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+
+        if (_updateDismissed)
+            return;
 
         var update = await _updateService.CheckForUpdatesAsync();
 
         if (update != null)
         {
             this.ShowPopup(
-                new UpdatePopup(update, _downloadService, _installerService));
+                new UpdatePopup(
+                    update, 
+                    _downloadService, 
+                    _installerService,
+                    () => _updateDismissed = true),
+                new PopupOptions
+                {
+                    CanBeDismissedByTappingOutsideOfPopup = false,
+                    PageOverlayColor = Color.FromArgb("#80000080")
+                });
         }
 
         //await IniciarAnimacionFlor();

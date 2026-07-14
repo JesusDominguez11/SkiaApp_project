@@ -3,7 +3,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    x:Class="SkiaApp.Popups.UpdatePopup">
+    x:Class="SkiaApp.Popups.UpdatePopup"
+    >
 
     <Border
         WidthRequest="320"
@@ -13,35 +14,44 @@
 
         <VerticalStackLayout Spacing="15">
 
-            <ProgressBar Progress="{Binding Progress}" />
-
-            <Label Text="{Binding Status}" />
-
             <Label
                 Text="Nueva actualización"
                 FontSize="22"
+                TextColor="Black"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"/>
 
             <Label
                 x:Name="lblVersion"
+                TextColor="Black"
                 FontSize="16"
                 HorizontalOptions="Center"/>
 
+            <ProgressBar
+                x:Name="progressBar"
+                Progress="0"
+                HeightRequest="10"/>
+
             <Label
-                x:Name="lblChanges"
-                FontSize="14"/>
+                x:Name="lblStatus"
+                Text=""
+                TextColor="Black"
+                HorizontalOptions="Center"/>
 
             <HorizontalStackLayout
                 Spacing="10"
                 HorizontalOptions="Center">
 
                 <Button
+                    x:Name="btnLater"
                     Text="Más tarde"
+                    TextColor="White"
                     Clicked="Close_Clicked"/>
 
                 <Button
+                    x:Name="btnUpdate"
                     Text="Actualizar"
+                    TextColor="White"
                     Clicked="Update_Clicked"/>
 
             </HorizontalStackLayout>
