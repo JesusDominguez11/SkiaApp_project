@@ -13,7 +13,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var page = _services.GetRequiredService<DashboardPage>();
+            var page = _services.GetRequiredService<MainPage>();
 
             return new Window(page) { Title = "SkiaApp" };
         }

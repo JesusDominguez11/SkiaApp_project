@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
+
 #if ANDROID
 using SkiaApp.Platforms.Android;
 #endif
@@ -22,6 +24,8 @@ namespace SkiaApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddMudServices();
             builder.Services.AddTransient<DashboardPage>();
             builder.Services.AddSingleton<StateService>();
             builder.Services.AddSingleton<IVersionService, VersionService>();

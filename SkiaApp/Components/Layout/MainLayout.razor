@@ -1,17 +1,183 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+<MudLayout>
+    <MudAppBar Elevation="0" Dense="true"
+               Style="backdrop-filter: blur(10px); background-color: #8f8f8f0d;">
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" OnClick="DrawerToggle" />
+
+        <img @onclick="@(() => RedirectHomePage())" src="images/Panasonic_logo.png" alt="App Icon" style="height:28px; cursor:pointer;" class="forma-con-sombra" />
+
+        <MudSpacer />
+
+        <MudButton Variant="Variant.Text" Color="Color.Error" OnClick="Logout" EndIcon="@Icons.Material.Filled.Logout">
+            Salir
+        </MudButton>
+
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen" Elevation="0" ClipMode="DrawerClipMode.Docked" Breakpoint="Breakpoint.Xxl">
+        <MudStack Spacing="2">
+            <NavMenu />
+        </MudStack>
+
+        <MudSpacer />
+
+        <MudPaper Class="pa-4" Style="background-color:transparent;">
+            <MudSwitch @bind-Value="IsDarkMode"
+                       Color="Color.Success"
+                       T="bool"
+                       Label="Cambiar tema"
+                       ThumbIconColor="Color.Dark"
+                       ThumbIcon="@Icons.Material.Filled.DarkMode" />
+        </MudPaper>
+    </MudDrawer>
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+            <div class="@( _isDarkMode ? "theme-dark" : "theme-light" )">
+                <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+                @Body
+            </div>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _isDarkMode = false;
+    }
+
+    private void ShowErrorNotify(string message)
+    {
+
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomLeft;
+        Snackbar.Configuration.SnackbarVariant = Variant.Filled;
+        Snackbar.Configuration.PreventDuplicates = false;
+        Snackbar.Configuration.VisibleStateDuration = 5000;
+        Snackbar.Configuration.HideTransitionDuration = 500;
+        Snackbar.Configuration.ShowTransitionDuration = 500;
+        Snackbar.Configuration.SuccessIcon = Icons.Material.TwoTone.Save;
+
+        Snackbar.Add($"{message}", Severity.Error);
+    }
+
+    public void Dispose()
+    {
+
+    }
+
+    private bool _isDarkMode = false;
+    private bool IsDarkMode
+    {
+        get => _isDarkMode;
+        set
+        {
+            if (_isDarkMode != value)
+            {
+                _isDarkMode = value;
+                OnThemeChanged(value);
+            }
+        }
+    }
+
+    private async Task OnThemeChanged(bool value)
+    {
+        _isDarkMode = value;
+        StateHasChanged();
+    }
+
+    private async Task RedirectHomePage()
+    {
+        Nav.NavigateTo("/home");
+    }
+
+
+    private MudTheme _theme = new MudTheme()
+    {
+        PaletteLight = new PaletteLight()
+        {
+            Primary = "#445ABF",
+            Secondary = "#4CAF50",
+            Tertiary = "#FF9800",
+            Background = "#dad9df",
+            Surface = "#FFFFFF",
+            AppbarBackground = "#1976D2",
+            AppbarText = "#120F1E",
+            DrawerBackground = "#F2F9FF",
+            DrawerText = "#212121",
+            DrawerIcon = "#445ABF",
+            TextPrimary = "#120F1E",
+            TextSecondary = "#757575",
+            ActionDefault = "#445ABF",
+            ActionDisabled = "#BDBDBD",
+            ActionDisabledBackground = "#F5F5F5",
+            Divider = "#BDBDBD",
+            DividerLight = "#EEEEEE",
+            TableLines = "#E0E0E0",
+            LinesDefault = "#E0E0E0",
+            LinesInputs = "#BDBDBD",
+            OverlayDark = "rgba(0,0,0,0.5)",
+            Success = "#445ABF",
+            Info = "#2196F3",
+            Warning = "#FFC107",
+            Error = "#F44336"
+        },
+        PaletteDark = new PaletteDark()
+        {
+            Primary = "#96A9FF",
+            Secondary = "#76ff7b",
+            Tertiary = "#FFB74D",
+            Background = "#120F1E",
+            Surface = "#1E1E1E",
+            AppbarBackground = "#263238",
+            AppbarText = "#FFFFFF",
+            DrawerBackground = "#120F1E",
+            DrawerText = "#FFFFFF",
+            DrawerIcon = "#96A9FF",
+            TextPrimary = "#FFFFFF",
+            TextSecondary = "#B0BEC5",
+            ActionDefault = "#96A9FF",
+            ActionDisabled = "#616161",
+            ActionDisabledBackground = "#212121",
+            Divider = "#424242",
+            DividerLight = "#616161",
+            TableLines = "#37474F",
+            LinesDefault = "#37474F",
+            LinesInputs = "#546E7A",
+            TableStriped = "#343256",
+            OverlayDark = "rgba(255,255,255,0.05)",
+            Success = "#96A9FF",
+            Info = "#29B6F6",
+            Warning = "#FFCA28",
+            Error = "#EF5350"
+        }
+    };
+
+    private void Logout()
+    {
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+}
+
+
+
+
+<style>
+    .forma-con-sombra {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+</style>

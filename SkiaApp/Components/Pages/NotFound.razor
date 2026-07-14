@@ -1,0 +1,34 @@
+﻿@page "/notfound"
+
+<MudContainer MaxWidth="MaxWidth.False" Class="mt-12 mb-8 page-transition">
+        <MudStack AlignItems="AlignItems.Center" Justify="Justify.Center" Spacing="4">
+            <MudAvatar Size="Size.Large"
+                       Color="Color.Dark"
+                       Variant="Variant.Filled">
+                <MudIcon Icon="@Icons.Material.Outlined.SearchOff"
+                         Size="Size.Large" />
+            </MudAvatar>
+
+            <MudText Typo="Typo.h4" Align="Align.Center">
+                Página no encontrada
+            </MudText>
+
+            <MudText Typo="Typo.button" Align="Align.Center">
+                Verifique la dirección ingresada o regrese al panel principal.
+            </MudText>
+
+            <MudButton Variant="Variant.Text"
+                       Color="Color.Dark"
+                       OnClick="GoHome">
+                Volver al inicio
+            </MudButton>
+        </MudStack>
+</MudContainer>
+
+@code
+{
+    private void GoHome()
+    {
+        Nav.NavigateTo("/");
+    }
+}

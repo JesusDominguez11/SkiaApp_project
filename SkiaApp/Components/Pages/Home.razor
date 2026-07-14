@@ -1,22 +1,110 @@
 ﻿@page "/"
+@using SkiaApp.Services
 
-<PageTitle>Dashboard</PageTitle>
+@inject IVersionService VersionService
+@inject IUpdateService UpdateService
 
-<h1>Dashboard</h1>
+<PageTitle>SkiaApp</PageTitle>
 
-<button @onclick="IncrementarRPM">
-    Acelerar
-</button>
+<MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
+    <MudItem xs="12">
+        <MudPaper Elevation="4" Class="pa-6 paper-gradient" Style="border-radius:10px;">
+            <MudText Typo="Typo.h4" Class="mb-2">
+                Testing_App
+            </MudText>
 
-<p>RPM: @rpm</p>
+            <MudText Typo="Typo.subtitle1" Color="Color.Primary">
+                gráficos, animaciones y renderizado
+            </MudText>
+        </MudPaper>
+    </MudItem>
 
-@code {
+    <MudStack Spacing="0" Class="mt-6">
+        <MudText Typo="Typo.button" Class="paper-title">
+            INFORMACION
+        </MudText>
+        <MudPaper class="paper-gradient" >
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                    <b>Versión instalada:</b>
+                    @_currentVersion
+            </MudStack>
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <b>Estado:</b>
+                @_updateStatus
+            </MudStack>
+        </MudPaper>
+    </MudStack>
 
-    private int rpm = 0;
+    <MudStack Spacing="0" Class="mt-6">
+        <MudText Typo="Typo.button" Class="paper-title">
+            ACCIONES RAPIDAS
+        </MudText>
+        <MudPaper Class="paper-gradient">
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                Buscar actualizaciones
+                <MudButton Variant="Variant.Text"
+                           Color="Color.Dark"
+                           OnClick="CheckUpdates">
+                    <MudIcon Icon="@Icons.Material.Outlined.SystemUpdate"/>
+                       </MudButton>
+            </MudStack>
 
-    private void IncrementarRPM()
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                Galeria
+                <MudButton Variant="Variant.Text"
+                           Color="Color.Dark"
+                           Href="/drawings">
+                    <MudIcon Icon="@Icons.Material.Outlined.ArrowRight" />
+                </MudButton>
+            </MudStack>
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                Configuracion
+                <MudButton Variant="Variant.Text"
+                           Color="Color.Dark"
+                           Href="/settings">
+                    <MudIcon Icon="@Icons.Material.Outlined.ArrowRight" />
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+    </MudStack>
+
+
+
+
+
+
+
+
+
+</MudContainer>
+
+@code
+{
+    private string _currentVersion = "";
+    private string _updateStatus = "Comprobando...";
+
+    protected override async Task OnInitializedAsync()
     {
-        rpm += 500;
+        _currentVersion = VersionService.CurrentVersion;
+
+        var update = await UpdateService.CheckForUpdatesAsync();
+
+        if (update == null)
+            _updateStatus = "La aplicación está actualizada";
+        else
+            _updateStatus = $"Disponible {update.Version}";
     }
 
+    private async Task CheckUpdates()
+    {
+        _updateStatus = "Comprobando...";
+
+        var update = await UpdateService.CheckForUpdatesAsync();
+
+        if (update == null)
+            _updateStatus = "No hay actualizaciones";
+        else
+            _updateStatus = $"Nueva versión {update.Version}";
+    }
 }

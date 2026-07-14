@@ -1,0 +1,126 @@
+﻿@page "/drawings"
+
+<PageTitle>Drawings</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
+
+    <MudPaper Elevation="4" Class="pa-6 paper-gradient" Style="border-radius:10px;">
+        <MudText Typo="Typo.h4">
+            Galería de dibujos
+        </MudText>
+
+        <MudText Typo="Typo.subtitle1" Color="Color.Primary">
+            Colección de ejemplos realizados con SkiaSharp.
+        </MudText>
+    </MudPaper>
+
+    <MudGrid Class="mt-6">
+
+        @foreach (var drawing in drawings)
+        {
+            <MudItem xs="12" sm="6" md="4">
+
+                <MudPaper Class="pa-4 paper-gradient drawing-card">
+
+                    <MudStack Spacing="2">
+
+                        <MudIcon Icon="@drawing.Icon"
+                                 Size="Size.Large"
+                                 Color="Color.Primary" />
+
+                        <MudText Typo="Typo.h6">
+                            @drawing.Name
+                        </MudText>
+
+                        <MudText Typo="Typo.body2">
+                            @drawing.Description
+                        </MudText>
+
+                        <MudChip T="string"
+                                 Color="@drawing.Color"
+                                 Variant="Variant.Outlined">
+                            @drawing.Status
+                        </MudChip>
+
+                        <MudSpacer />
+
+                        <MudButton Variant="Variant.Filled"
+                                   Color="Color.Primary"
+                                   Href="@drawing.Url">
+
+                            Abrir
+
+                        </MudButton>
+
+                    </MudStack>
+
+                </MudPaper>
+
+            </MudItem>
+        }
+
+    </MudGrid>
+
+</MudContainer>
+
+@code
+{
+    public class DrawingItem
+    {
+        public string Name { get; set; } = "";
+
+        public string Description { get; set; } = "";
+
+        public string Url { get; set; } = "";
+
+        public string Status { get; set; } = "";
+
+        public string Icon { get; set; } = "";
+
+        public Color Color { get; set; }
+    }
+
+    private readonly List<DrawingItem> drawings =
+    [
+        new()
+        {
+            Name = "test",
+            Description = "descripcion de prueba.",
+            Url = "/drawings/flower",
+            Status = "Completado",
+            Icon = Icons.Material.Outlined.LocalFlorist,
+            Color = Color.Success
+        },
+
+        // new()
+        // {
+        //     Name = "Planeta",
+        //     Description = "Uso de gradientes y sombras.",
+        //     Url = "/drawings/planet",
+        //     Status = "Próximamente",
+        //     Icon = Icons.Material.Outlined.Public,
+        //     Color = Color.Warning
+        // },
+
+        // new()
+        // {
+        //     Name = "Nave",
+        //     Description = "Transformaciones y rotaciones.",
+        //     Url = "/drawings/ship",
+        //     Status = "Próximamente",
+        //     Icon = Icons.Material.Outlined.RocketLaunch,
+        //     Color = Color.Warning
+        // },
+
+        // new()
+        // {
+        //     Name = "Paisaje",
+        //     Description = "Curvas, montañas y árboles.",
+        //     Url = "/drawings/landscape",
+        //     Status = "Próximamente",
+        //     Icon = Icons.Material.Outlined.Landscape,
+        //     Color = Color.Warning
+        // }
+    ];
+}
+```

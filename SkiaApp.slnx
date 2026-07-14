@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="SkiaApp/SkiaApp.csproj" />
+  <Project Path="SkiaApp/SkiaApp.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

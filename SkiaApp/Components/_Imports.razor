@@ -7,3 +7,13 @@
 @using Microsoft.JSInterop
 @using SkiaApp
 @using SkiaApp.Components
+
+@using MudBlazor
+@using SkiaApp.Components.Pages
+
+@* services *@
+@inject ISnackbar Snackbar
+@inject IJSRuntime JS
+@inject IDialogService DialogService
+
+@inject NavigationManager Nav
