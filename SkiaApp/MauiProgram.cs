@@ -26,18 +26,16 @@ namespace SkiaApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
 
-            builder.Services.AddTransient<MainPage>();
             builder.Services.AddMudServices();
-            builder.Services.AddTransient<DashboardPage>();
-            builder.Services.AddSingleton<StateService>();
+            builder.Services.AddTransient<MainPage>();
             builder.Services.AddSingleton<IVersionService, VersionService>();
             builder.Services.AddSingleton<IUpdateService, UpdateService>();
             builder.Services.AddSingleton<IDownloadService, DownloadService>();
+            #if ANDROID
+            IServiceCollection serviceCollection = builder.Services.AddSingleton<IInstallerService, AndroidInstallerService>();
+            #endif
             builder.Services.AddSingleton<DrawingNavigationService>();
             builder.Services.AddSingleton<IDrawingRenderer, FlowerRenderer>();
-#if ANDROID
-            IServiceCollection serviceCollection = builder.Services.AddSingleton<IInstallerService, AndroidInstallerService>();
-#endif
             builder.Services.AddSingleton<HttpClient>();
             builder.Services.AddMauiBlazorWebView();
 

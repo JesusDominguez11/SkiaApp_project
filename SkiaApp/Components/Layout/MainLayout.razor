@@ -11,13 +11,13 @@
 
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" OnClick="DrawerToggle" />
 
-        <img @onclick="@(() => RedirectHomePage())" src="images/Panasonic_logo.png" alt="App Icon" style="height:28px; cursor:pointer;" class="forma-con-sombra" />
-
+        @* <img @onclick="@(() => RedirectHomePage())" src="images/Panasonic_logo.png" alt="App Icon" style="height:28px; cursor:pointer;" class="forma-con-sombra" /> *@
+        <MudText Typo="Typo.h6">SkiaApp</MudText>
         <MudSpacer />
 
-        <MudButton Variant="Variant.Text" Color="Color.Error" OnClick="Logout" EndIcon="@Icons.Material.Filled.Logout">
+@*         <MudButton Variant="Variant.Text" Color="Color.Error" OnClick="Logout" EndIcon="@Icons.Material.Filled.Logout">
             Salir
-        </MudButton>
+        </MudButton> *@
 
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen" Elevation="0" ClipMode="DrawerClipMode.Docked" Breakpoint="Breakpoint.Xxl">
@@ -27,7 +27,7 @@
 
         <MudSpacer />
 
-        <MudPaper Class="pa-4" Style="background-color:transparent;">
+        <MudPaper hidden="hidden" Class="pa-4" Style="background-color:transparent;">
             <MudSwitch @bind-Value="IsDarkMode"
                        Color="Color.Success"
                        T="bool"
@@ -38,12 +38,10 @@
     </MudDrawer>
 
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
             <div class="@( _isDarkMode ? "theme-dark" : "theme-light" )">
                 <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
                 @Body
             </div>
-        </MudContainer>
     </MudMainContent>
 </MudLayout>
 
@@ -117,7 +115,7 @@
             AppbarBackground = "#1976D2",
             AppbarText = "#120F1E",
             DrawerBackground = "#F2F9FF",
-            DrawerText = "#212121",
+            DrawerText = "#888888",
             DrawerIcon = "#445ABF",
             TextPrimary = "#120F1E",
             TextSecondary = "#757575",

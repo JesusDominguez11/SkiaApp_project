@@ -8,75 +8,32 @@
 
 <MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
 
-    <MudPaper Elevation="4"
-              Class="pa-6 paper-gradient"
-              Style="border-radius:10px;">
-
-        <MudText Typo="Typo.h4">
-            Galería de dibujos
+    <MudText Typo="Typo.h6" Class="mb-2">
+            Galería
         </MudText>
 
-        <MudText Typo="Typo.subtitle1" Color="Color.Primary">
-            Dibujitos para mi amorcito
+    <MudStack Spacing="0" Class="mt-6">
+        <MudText Typo="Typo.caption" Class="paper-title">
+            DIBUJITOS
         </MudText>
-
-    </MudPaper>
-
-
-    <MudGrid Class="mt-6">
-
         @foreach (var drawing in drawings)
         {
-            <MudItem xs="12" sm="6" md="4">
+            <MudPaper Class="pa-4 paper-gradient">
+                <div onclick="@(() => OpenDrawing(drawing.Id))">
+                    <MudStack Row="true" Justify="Justify.SpaceBetween">
 
-                <MudPaper Class="pa-4 paper-gradient drawing-card">
-
-                    <MudStack Spacing="2">
-
-                        <MudIcon Icon="@drawing.Icon"
-                                 Size="Size.Large"
-                                 Color="Color.Primary" />
-
-
-                        <MudText Typo="Typo.h6">
+                        <MudText Typo="Typo.caption">
                             @drawing.Name
+                            <MudIcon Icon="@drawing.Icon"
+                                     Color="Color.Dark" />
                         </MudText>
-
-
-                        <MudText Typo="Typo.body2">
-                            @drawing.Description
-                        </MudText>
-
-
-                        <MudChip T="string"
-                                 Color="@drawing.Color"
-                                 Variant="Variant.Outlined">
-
-                            @drawing.Status
-
-                        </MudChip>
-
-
-                        <MudSpacer />
-
-
-                        <MudButton Variant="Variant.Filled"
-                                   Color="Color.Primary"
-                                   OnClick="@(() => OpenDrawing(drawing.Id))">
-
-                            Abrir
-
-                        </MudButton>
-
-
+                        <MudIcon Icon="@Icons.Material.Outlined.ArrowRight" />
                     </MudStack>
-
-                </MudPaper>
-
-            </MudItem>
+                </div>
+            </MudPaper>
         }
 
-    </MudGrid>
+    </MudStack>
 
 </MudContainer>
 

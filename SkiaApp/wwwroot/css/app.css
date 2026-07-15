@@ -8,6 +8,11 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+body {
+    height: 100vh;
+    background: linear-gradient(127deg, #79797987, #ffffff);
+}
+
 a, .btn-link {
     color: #006bb7;
 }
@@ -93,37 +98,6 @@ h1:focus {
 
 .page-transition {
     animation: fadeInUp 0.4s ease;
-}
-
-
-.theme-dark .paper-gradient {
-    background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
-    color: white;
-    border-radius: 12px;
-    padding: 16px;
-}
-
-.theme-light .paper-gradient {
-    background: linear-gradient(135deg, #ffffff, #ffffff70);
-    color: black;
-    border-radius: 12px;
-    padding: 16px;
-}
-
-    .theme-light .paper-gradient.home-card::after {
-        background-color: rgba(218, 230, 255, 0.85);
-    }
-
-    .theme-light .paper-gradient.home-card:hover::after {
-        background-color: rgba(218, 230, 255, 0.65);
-    }
-
-.theme-dark .paper-gradient.home-card::after {
-    background-color: rgba(30, 30, 47, 0.85);
-}
-
-.theme-dark .paper-gradient.home-card:hover::after {
-    background-color: rgba(30, 30, 47, 0.65);
 }
 
 .theme-light .mud-table thead .mud-table-cell {
@@ -249,9 +223,10 @@ h1:focus {
 }
 
 .paper-gradient {
-    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 3%) !important;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%) !important;
     border-radius: 12px !important;
-    background: #f4f4f4 !important;
+    background: radial-gradient(#ffffff47 30%, #ffffff26 80%, #ffffff17 100%) !important;
+    padding: 16px;
 }
 
 .mud-typography.mud-typography-subtitle1 {
@@ -266,13 +241,7 @@ h1:focus {
 }
 
 .mud-nav-link:hover {
-    color: black !important;
-}
-
-.drawing-card {
-    border-radius: 12px;
-    transition: transform .25s ease, box-shadow .25s ease;
-    cursor: pointer;
+    color: white !important;
 }
 
 .drawing-card:hover {
@@ -387,4 +356,12 @@ h1:focus {
 .hover-card,
 .hover-card.mud-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.mud-drawer {
+    background-color: rgb(0 0 0 / 72%) !important;
+}
+
+.mud-drawer-overlay {
+    backdrop-filter: blur(3px);
 }

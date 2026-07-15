@@ -4,26 +4,22 @@
 <PageTitle>SkiaApp</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
-    <MudItem xs="12">
-        <MudPaper Elevation="4" Class="pa-6 paper-gradient" Style="border-radius:10px;">
-            <MudText Typo="Typo.h4" Class="mb-2">
-                SkiaApp
+            <MudText Typo="Typo.h6" Class="mb-2">
+               Home
             </MudText>
-
-            <MudText Typo="Typo.subtitle1" Color="Color.Primary">
-                
-            </MudText>
-        </MudPaper>
-    </MudItem>
 
     <MudStack Spacing="0" Class="mt-6">
-        <MudText Typo="Typo.button" Class="paper-title">
+        <MudText Typo="Typo.caption" Class="paper-title">
             INFORMACION
         </MudText>
         <MudPaper class="paper-gradient" >
             <MudStack Row="true" Justify="Justify.SpaceBetween">
                     <b>Versión instalada:</b>
                     @_currentVersion
+            </MudStack>
+            <MudStack Row="true" Justify="Justify.SpaceBetween">
+                <b>Build:</b>
+                @_currentBuild
             </MudStack>
             <MudStack Row="true" Justify="Justify.SpaceBetween">
                 <b>Estado:</b>
@@ -33,7 +29,7 @@
     </MudStack>
 
     <MudStack Spacing="0" Class="mt-6">
-        <MudText Typo="Typo.button" Class="paper-title">
+        <MudText Typo="Typo.caption" Class="paper-title">
             ACCIONES RAPIDAS
         </MudText>
         <MudPaper Class="paper-gradient">
@@ -78,12 +74,14 @@
 {
     bool showmodal = false;
     private string _currentVersion = "";
+    private int _currentBuild;
     private string _updateStatus = "Comprobando...";
     private bool _updateDismissed;
 
     protected override async Task OnInitializedAsync()
     {
         _currentVersion = VersionService.CurrentVersion;
+        _currentBuild = VersionService.Build;
 
         await CheckForUpdatesAsync();
     }

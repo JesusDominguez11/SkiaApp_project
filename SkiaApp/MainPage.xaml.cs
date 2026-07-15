@@ -1,6 +1,5 @@
 ﻿using SkiaApp.Graphics;
 using SkiaApp.Services;
-using SkiaSharp;
 using SkiaSharp.Views.Maui;
 
 namespace SkiaApp

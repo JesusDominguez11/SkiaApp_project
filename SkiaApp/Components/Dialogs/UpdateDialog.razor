@@ -1,4 +1,7 @@
-﻿
+﻿#if ANDROID
+@inject IInstallerService InstallerService
+#endif
+
 @if (Update != null)
 {
     <div class="modal-overlay">
@@ -129,9 +132,9 @@
 
         StateHasChanged();
 
-
-
+        #if ANDROID
         await InstallerService.InstallAsync(path);
+        #endif
     }
 
 }
