@@ -1,5 +1,7 @@
-﻿using SkiaSharp;
+﻿using Google.Android.Material.Slider;
 using Microsoft.Maui.Dispatching;
+using SkiaSharp;
+using System.Diagnostics;
 
 namespace SkiaApp.Graphics;
 
@@ -30,6 +32,11 @@ public class FlowerRenderer : IDrawingRenderer
     public event Action? Updated;
     private double _progress;
     private IDispatcherTimer? _timer;
+    private readonly Stopwatch _stopwatch = Stopwatch.StartNew();
+    private double _lastTime;
+
+    private const float GrowthSpeed = 1f / 3f; 
+    private const float WindSpeed = 2f;    
 
 
 
@@ -44,29 +51,32 @@ public class FlowerRenderer : IDrawingRenderer
         _growth = 0;
         _windTime = 0;
         _state = FlowerState.Growing;
+        _lastTime = _stopwatch.Elapsed.TotalSeconds;
 
         _timer?.Stop();
         _timer = Dispatcher.GetForCurrentThread().CreateTimer();
-        _timer.Interval = TimeSpan.FromMicroseconds(16);
+        _timer.Interval = TimeSpan.FromMilliseconds(16);
 
 
         _timer.Tick += (s, e) =>
         {
+            double currentTime = _stopwatch.Elapsed.TotalSeconds;
+            float deltaTime = (float)(currentTime - _lastTime);
+            _lastTime = currentTime;
+
             if (_state == FlowerState.Growing)
             {
-                _growth += 0.01f;
-
+                _growth += GrowthSpeed * deltaTime;
 
                 if (_growth >= 1f)
                 {
                     _growth = 1f;
-
                     _state = FlowerState.Wind;
                 }
             }
             else
             {
-                _windTime += 0.05f;
+                _windTime += WindSpeed * deltaTime;
             }
 
             Updated?.Invoke();
