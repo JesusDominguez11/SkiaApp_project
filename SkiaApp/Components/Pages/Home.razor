@@ -1,9 +1,6 @@
 ﻿@page "/"
 @using SkiaApp.Services
 
-@inject IVersionService VersionService
-@inject IUpdateService UpdateService
-
 <PageTitle>SkiaApp</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.False" Class="mt-8 mb-8 page-transition">
@@ -44,7 +41,7 @@
                 Buscar actualizaciones
                 <MudButton Variant="Variant.Text"
                            Color="Color.Dark"
-                           OnClick="CheckUpdates">
+                           OnClick="CheckForUpdatesAsync">
                     <MudIcon Icon="@Icons.Material.Outlined.SystemUpdate"/>
                        </MudButton>
             </MudStack>
@@ -68,43 +65,63 @@
             </MudStack>
         </MudPaper>
     </MudStack>
-
-
-
-
-
-
-
-
-
 </MudContainer>
+
+@if (_updateInfo != null)
+{
+    <UpdateDialog 
+    Update="_updateInfo"
+    OnClosed="UpdateClosed" />
+}
 
 @code
 {
+    bool showmodal = false;
     private string _currentVersion = "";
     private string _updateStatus = "Comprobando...";
+    private bool _updateDismissed;
 
     protected override async Task OnInitializedAsync()
     {
         _currentVersion = VersionService.CurrentVersion;
 
-        var update = await UpdateService.CheckForUpdatesAsync();
-
-        if (update == null)
-            _updateStatus = "La aplicación está actualizada";
-        else
-            _updateStatus = $"Disponible {update.Version}";
+        await CheckForUpdatesAsync();
     }
 
-    private async Task CheckUpdates()
+    private UpdateInfo? _updateInfo;
+
+    private async Task CheckForUpdatesAsync()
     {
+        if (_updateDismissed)
+            return;
+
         _updateStatus = "Comprobando...";
+
+        StateHasChanged();
 
         var update = await UpdateService.CheckForUpdatesAsync();
 
         if (update == null)
-            _updateStatus = "No hay actualizaciones";
-        else
-            _updateStatus = $"Nueva versión {update.Version}";
+        {
+            _updateStatus = "La aplicación está actualizada";
+            return;
+        }
+
+        _updateStatus = $"Disponible {update.Version}";
+
+        _updateInfo = update;
+
+        Console.WriteLine($"UPDATE ENCONTRADA: {update.Version}");
+
+        StateHasChanged();
+    }
+
+    private void UpdateClosed(bool dismissed)
+    {
+        _updateDismissed = dismissed;
+
+        _updateInfo = null;
+
+        StateHasChanged();
     }
 }

@@ -1,0 +1,79 @@
+﻿
+@if (Mostrar)
+{
+    <div class="modal-overlay">
+        <div class="paper-gradient modal-contenido" >
+            <div class="spinner"></div>
+            <p>@textToShow</p>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public bool Mostrar { get; set; }
+
+    [Parameter]
+    public string textToShow { get; set; }
+}
+
+
+
+
+<style>
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(28 28 28 / 25%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1300;
+        backdrop-filter: blur(2px);
+    }
+
+    .modal-contenido {
+        color: white !important;
+        background: #343434 !important;
+        padding: 30px 60px !important;
+        animation: fadeInZoom 0.3s ease-in-out;
+    }
+
+
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #919191;
+        border-top: 4px solid #ffffff;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        animation: girar 1s linear infinite;
+    }
+
+    @@keyframes girar {
+        to
+
+    {
+        transform: rotate(360deg);
+    }
+
+    }
+
+    @@keyframes fadeInZoom {
+        from
+
+    {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    }
+</style>

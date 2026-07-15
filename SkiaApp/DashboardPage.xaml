@@ -19,11 +19,5 @@
         HorizontalOptions="Start"
         FontSize="14" TranslationY="30"/>
 
-        <skia:SKCanvasView
-            x:Name="canvasView"
-            HeightRequest="500"
-            WidthRequest="500"
-            PaintSurface="OnPaintSurface"/>
-
     </Grid>
 </ContentPage>

@@ -9,13 +9,19 @@
 @using SkiaApp.Components
 
 @using MudBlazor
-@using SkiaApp.Components.Pages
+@using SkiaApp.Models
 @using SkiaApp.Services
+@using SkiaApp.Components.Pages
+@using SkiaApp.Components.Dialogs
 
 @* services *@
-@inject ISnackbar Snackbar
 @inject IJSRuntime JS
+@inject ISnackbar Snackbar
 @inject IDialogService DialogService
+@inject IVersionService VersionService
+@inject IUpdateService UpdateService
+@inject IDownloadService DownloadService
+@inject IInstallerService InstallerService
 
 @inject NavigationManager Nav
 @inject DrawingNavigationService DrawingService

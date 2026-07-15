@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\graphics\\flowerrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\graphics\\flowerrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\components\\dialogs\\updatedialog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\components\\dialogs\\updatedialog.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\components\\dialogs\\modal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\components\\dialogs\\modal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\jd66188\\source\\repos\\skiaapp\\skiaapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,33 +34,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\MainPage.xaml",
               "RelativeDocumentMoniker": "SkiaApp\\MainPage.xaml",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\MainPage.xaml",
               "RelativeToolTip": "SkiaApp\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-07-14T22:01:02.12Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "SkiaApp\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\MainPage.xaml.cs",
               "RelativeToolTip": "SkiaApp\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-14T21:53:15.903Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -56,15 +70,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "SkiaApp\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "SkiaApp\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAAAG4BAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-15T00:36:14.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Modal.razor",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Dialogs\\Modal.razor",
+              "RelativeDocumentMoniker": "SkiaApp\\Components\\Dialogs\\Modal.razor",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Dialogs\\Modal.razor",
+              "RelativeToolTip": "SkiaApp\\Components\\Dialogs\\Modal.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-15T00:12:35.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FlowerRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Graphics\\FlowerRenderer.cs",
-              "RelativeDocumentMoniker": "SkiaApp\\Graphics\\FlowerRenderer.cs",
-              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Graphics\\FlowerRenderer.cs",
-              "RelativeToolTip": "SkiaApp\\Graphics\\FlowerRenderer.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAQwFoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-14T21:48:41.706Z",
+              "Title": "UpdateDialog.razor",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Dialogs\\UpdateDialog.razor",
+              "RelativeDocumentMoniker": "SkiaApp\\Components\\Dialogs\\UpdateDialog.razor",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Dialogs\\UpdateDialog.razor",
+              "RelativeToolTip": "SkiaApp\\Components\\Dialogs\\UpdateDialog.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-14T23:34:30.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "SkiaApp\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\JD66188\\source\\repos\\SkiaApp\\SkiaApp\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "SkiaApp\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwEgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-14T23:30:45.362Z",
               "EditorCaption": ""
             }
           ]
