@@ -33,7 +33,7 @@ namespace SkiaApp.Services
                 if (updateInfo == null)
                     return null;
 
-                if (_versionService.IsNewerVersion(updateInfo.Version))
+                if (_versionService.IsNewerVersion(updateInfo.Build))
                     return updateInfo;
 
                 return null;

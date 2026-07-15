@@ -10,6 +10,7 @@ namespace SkiaApp.Models
     {
         public string Version { get; set; } = "";
 
+        public int Build {  get; set; }
         public string ApkUrl { get; set; } = "";
 
         public string Changelog { get; set; } = "";

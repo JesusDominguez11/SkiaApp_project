@@ -9,19 +9,15 @@ namespace SkiaApp.Services
 {
     internal class VersionService : IVersionService
     {
-        public string CurrentVersion => AppInfo.Current.VersionString;
+        public string CurrentVersion =>
+            AppInfo.Current.VersionString;
 
-        public int Build => int.Parse(AppInfo.Current.BuildString);
+        public int Build =>
+            int.Parse(AppInfo.Current.BuildString);
 
-        public bool IsNewerVersion(string remoteVersion)
+        public bool IsNewerVersion(int remoteBuild)
         {
-            if (!System.Version.TryParse(remoteVersion, out var remote))
-                return false;
-
-            if (!System.Version.TryParse(CurrentVersion, out var current))
-                return false;
-
-            return remote > current;
+            return remoteBuild > Build;
         }
     }
 }

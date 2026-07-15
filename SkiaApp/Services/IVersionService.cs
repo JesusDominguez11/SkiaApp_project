@@ -10,6 +10,6 @@ namespace SkiaApp.Services
     {
         string CurrentVersion {  get; }
         int Build {  get; }
-        bool IsNewerVersion(string remoteVersion);
+        bool IsNewerVersion(int remoteBuild);
     }
 }
