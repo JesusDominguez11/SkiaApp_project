@@ -1,7 +1,7 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.0",
   "build": 4,
-  "apkUrl": "https://github.com/JesusDominguez11/SkiaApp/releases/download/1/com.companyname.skiaapp-Signed1.0.3.apk",
+  "apkUrl": "https://github.com/JesusDominguez11/SkiaApp_project/releases/download/release/com.companyname.skiaapp-Signed.apk",
   "changelog": "",
   "mandatory": false
 }

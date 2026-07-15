@@ -14,9 +14,7 @@ namespace SkiaApp.Services
     {
         private readonly IVersionService _versionService;
         private readonly HttpClient _httpClient;
-
-        //private const string VersionUrl = "https://TU:URL/version.json";
-        private const string VersionUrl = "https://raw.githubusercontent.com/JesusDominguez11/SkiaApp/refs/heads/main/version.json";
+        private const string VersionUrl = "https://raw.githubusercontent.com/JesusDominguez11/SkiaApp_project/refs/heads/master/SkiaApp/version.json";
 
         public UpdateService(IVersionService versionService, HttpClient httpClient)
         {

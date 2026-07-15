@@ -11,16 +11,8 @@
       "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\services\\versionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\roman\\source\\repos\\skiaapp_project\\skiaapp\\services\\iversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\services\\iversionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\roman\\source\\repos\\skiaapp_project\\skiaapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|c:\\users\\roman\\source\\repos\\skiaapp_project\\skiaapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FF099FD-019B-F02A-4FE9-34861F785621}|SkiaApp\\SkiaApp.csproj|solutionrelative:skiaapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,34 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IVersionService.cs",
-              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\IVersionService.cs",
-              "RelativeDocumentMoniker": "SkiaApp\\Services\\IVersionService.cs",
-              "ToolTip": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\IVersionService.cs",
-              "RelativeToolTip": "SkiaApp\\Services\\IVersionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T15:44:03.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateService.cs",
-              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\UpdateService.cs",
-              "RelativeDocumentMoniker": "SkiaApp\\Services\\UpdateService.cs",
-              "ToolTip": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\UpdateService.cs",
-              "RelativeToolTip": "SkiaApp\\Services\\UpdateService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAnwCMAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T15:34:07.482Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -68,33 +34,34 @@
               "RelativeToolTip": "SkiaApp\\Services\\VersionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T15:23:09.137Z",
+              "WhenOpened": "2026-07-15T16:09:09.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "SkiaApp\\Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "SkiaApp\\Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-15T06:01:06.22Z",
+              "WhenOpened": "2026-07-15T16:05:55.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "SkiaApp\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\MauiProgram.cs",
-              "RelativeToolTip": "SkiaApp\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UpdateService.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\UpdateService.cs",
+              "RelativeDocumentMoniker": "SkiaApp\\Services\\UpdateService.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\SkiaApp_project\\SkiaApp\\Services\\UpdateService.cs",
+              "RelativeToolTip": "SkiaApp\\Services\\UpdateService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T06:00:52.559Z"
+              "WhenOpened": "2026-07-15T15:51:49.778Z",
+              "EditorCaption": ""
             }
           ]
         }
