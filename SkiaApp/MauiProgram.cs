@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using MudBlazor.Services;
 using SkiaApp.Graphics;
-
+using Plugin.Maui.Audio;
 
 #if ANDROID
 using SkiaApp.Platforms.Android;
@@ -19,6 +19,7 @@ namespace SkiaApp
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .AddAudio()
                 .UseMauiCommunityToolkit()
                 .UseSkiaSharp()
                 .ConfigureFonts(fonts =>
@@ -37,6 +38,7 @@ namespace SkiaApp
             builder.Services.AddSingleton<DrawingNavigationService>();
             builder.Services.AddSingleton<IDrawingRenderer, FlowerRenderer>();
             builder.Services.AddSingleton<HttpClient>();
+            builder.Services.AddSingleton<BackgroundMusicService>();
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG

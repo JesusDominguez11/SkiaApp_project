@@ -11,17 +11,28 @@ namespace SkiaApp
         private readonly IEnumerable<IDrawingRenderer> _renderers;
         private string _currentDrawing = "";
 
+        private readonly BackgroundMusicService _music;
         public MainPage(
             DrawingNavigationService drawingService,
-            IEnumerable<IDrawingRenderer> renderers)
+            IEnumerable<IDrawingRenderer> renderers,
+            BackgroundMusicService music)
         {
             InitializeComponent();
+
+            _music = music;
 
             _drawingService = drawingService;
 
             _renderers = renderers;
 
             _drawingService.ShowDrawingRequested += OnShowDrawing;
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await _music.PlayAsync();
         }
 
         private void OnShowDrawing(string drawing)

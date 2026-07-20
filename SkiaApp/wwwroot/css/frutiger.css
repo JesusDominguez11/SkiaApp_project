@@ -1,0 +1,270 @@
+﻿/* =========================================
+   FRUTIGER AERO THEME
+========================================= */
+
+
+/* =========================================
+   BASE
+========================================= */
+
+.theme-frutiger {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient( 180deg, #72d5ff 0%, #b9edff 45%, #8bd67d 100% );
+}
+
+
+/* =========================================
+   LAYERS
+========================================= */
+
+
+/* Fondo animado */
+.frutiger-world {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+/* Elementos de MudBlazor encima */
+
+.mud-appbar,
+.mud-drawer,
+.mud-main-content {
+    position: relative;
+    z-index: 10;
+}
+
+
+.theme-frutiger .mud-main-content {
+    background: transparent !important;
+}
+
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+
+.frutiger-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+
+/* =========================================
+   SUN
+========================================= */
+
+
+.sun {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    top: -40px;
+    right: 120px;
+    border-radius: 50%;
+    background: radial-gradient( circle, rgba(255,255,220,.9) 0%, rgba(255,240,150,.45) 25%, rgba(255,220,100,.15) 45%, transparent 70% );
+    filter: blur(18px);
+    opacity: .8;
+}
+
+
+
+/* =========================================
+   CLOUDS
+========================================= */
+
+
+.cloud {
+    position: absolute;
+    background: radial-gradient( ellipse, rgba(255,255,255,.85), transparent 70% );
+    filter: blur(20px);
+}
+
+
+.cloud-1 {
+    width: 500px;
+    height: 120px;
+    top: 80px;
+    left: 5%;
+}
+
+
+.cloud-2 {
+    width: 350px;
+    height: 100px;
+    top: 180px;
+    right: 10%;
+}
+
+
+
+/* =========================================
+   BUBBLES
+========================================= */
+
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient( circle at 30% 20%, white, rgba(255,255,255,.35), rgba(100,220,255,.1), transparent );
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow: inset 0 0 15px white, 0 0 20px rgba(255,255,255,.5);
+    animation: bubbleMove 18s infinite linear;
+    z-index: 1;
+}
+
+
+.bubble-1 {
+    width: 50px;
+    height: 50px;
+    left: 20%;
+    bottom: -60px;
+}
+
+
+.bubble-2 {
+    width: 90px;
+    height: 90px;
+    left: 65%;
+    bottom: -100px;
+    animation-delay: 5s;
+}
+
+
+.bubble-3 {
+    width: 35px;
+    height: 35px;
+    left: 80%;
+    bottom: -40px;
+    animation-delay: 10s;
+}
+
+
+
+@keyframes bubbleMove {
+
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+
+    20% {
+        opacity: .8;
+    }
+
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+
+
+/* =========================================
+   FISH
+========================================= */
+
+
+.fish {
+    position: absolute;
+    width: 120px;
+    opacity: .9;
+    filter: drop-shadow( 0 15px 20px rgba(0,100,200,.35) );
+    z-index: 2;
+    animation: fish-swim 35s linear infinite;
+}
+
+
+.fish-1 {
+    top: 35%;
+    left: -150px;
+}
+
+
+.fish-2 {
+    top: 55%;
+    left: -200px;
+    animation-delay: 12s;
+}
+
+
+
+@keyframes fish-swim {
+
+
+    from {
+        transform: translateX(-200px) translateY(0);
+    }
+
+
+    50% {
+        transform: translateX(50vw) translateY(-25px);
+    }
+
+
+    to {
+        transform: translateX(120vw) translateY(0);
+    }
+}
+
+
+
+/* =========================================
+   MESSENGER BUDDY
+========================================= */
+
+
+.messenger-buddy {
+    position: absolute;
+    right: 80px;
+    bottom: 50px;
+    width: 220px;
+    z-index: 3;
+    filter: drop-shadow( 0 20px 30px rgba(0,120,255,.35) );
+    animation: buddy-float 6s ease-in-out infinite;
+}
+
+
+
+@keyframes buddy-float {
+
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+/* =========================================
+   GLASS PANELS
+========================================= */
+
+
+.theme-frutiger .mud-paper {
+    background: linear-gradient( 180deg, rgba(255,255,255,.9), rgba(230,248,255,.75) );
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 22px;
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px white, 0 10px 30px rgba(0,120,220,.2);
+}

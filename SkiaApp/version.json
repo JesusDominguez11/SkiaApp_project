@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "build": 5,
+  "build": 6,
   "apkUrl": "https://github.com/JesusDominguez11/SkiaApp_project/releases/download/release/com.companyname.skiaapp-Signed.apk",
   "changelog": "",
   "mandatory": false

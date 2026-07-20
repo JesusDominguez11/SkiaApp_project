@@ -38,11 +38,38 @@
     </MudDrawer>
 
     <MudMainContent>
-            <div class="@( _isDarkMode ? "theme-dark" : "theme-light" )">
-                <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
-                @Body
-            </div>
+        
+
+            @Body
+
     </MudMainContent>
+
+    <div class="@CurrentTheme">
+
+            <div class="frutiger-world">
+
+                <img class="frutiger-bg"
+                     src="images/themes/frutiger/bg.png" />
+
+
+                <img class="fish fish-1"
+                     src="images/themes/frutiger/fish1.png" />
+
+
+                <img class="fish fish-2"
+                     src="images/themes/frutiger/fish2.png" />
+
+
+                <img class="messenger-buddy"
+                     src="images/themes/frutiger/msgbuddy.png" />
+
+
+                <div class="bubble bubble-1"></div>
+                <div class="bubble bubble-2"></div>
+                <div class="bubble bubble-3"></div>
+
+            </div>
+            </div>
 </MudLayout>
 
 @code {
@@ -90,6 +117,11 @@
             }
         }
     }
+
+    private string CurrentTheme =>
+    _isDarkMode
+        ? "theme-dark"
+        : "theme-frutiger";
 
     private async Task OnThemeChanged(bool value)
     {
